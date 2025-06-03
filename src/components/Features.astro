@@ -1,0 +1,113 @@
+---
+const features = [
+  {
+    title: "Functions",
+    description: "Understand what functions are, how they work, and how they help describe relationships between variables in mathematics and real life.",
+    icon: "M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3 M9 11.2h5.7",
+    color: "primary",
+    image: "/functionimage.png"
+  },
+  {
+    title: "Graphs",
+    description: "Learn to interpret and draw graphs of functions to visualize mathematical behavior and identify key properties like intercepts and slopes.",
+    icon: "M3 3v16a2 2 0 0 0 2 2h16 M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7",
+    color: "secondary",
+    image: "/functionimage.png"
+  },
+  {
+    title: "Derivatives",
+    description: "Discover how to measure change with derivatives, calculate rates of change, and find slopes of curves using simple rules and visual tools.",
+    icon: `
+          M4 2h16a2 2 0 012 2v20a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2z
+          M8 6h8
+          M16 14v4
+          M16 10h.01
+          M12 10h.01
+          M8 10h.01
+          M12 14h.01
+          M8 14h.01
+          M12 18h.01
+          M8 18h.01
+        `,
+    color: "accent",
+    image: "/functionimage.png"
+  },
+  {
+    title: "Applications of Derivatives",
+    description: " Use derivatives to solve real-world problems like finding maximum values, analyzing motion, and understanding optimization in nature and design.",
+    icon: "M14 2v4a2 2 0 0 0 2 2h4 M15 18a3 3 0 1 0-6 0 M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z M12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
+    color: "warning",
+    image: "/functionimage.png"
+  },
+  {
+    title: "Domain and Range",
+    description: "Learn how to identify the possible inputs (domain) and outputs (range) of a function, helping you understand where a function works and what values it can produce.",
+    icon: "M12 15v-3.014 M16 15v-3.014 M20 6H4 M20 8V4 M4 8V4 M8 15v-3.014",
+    color: "primary",
+    image: "/functionimage.png"
+
+  },
+  {
+    title: "Mobile Accessibility",
+    description: "Access your workspace from anywhere with fully responsive design optimized for all devices.",
+    icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
+    color: "secondary",
+    image: "/functionimage.png"
+
+  }
+];
+---
+
+<section id="features" class="section bg-gray-50 dark:bg-gray-800/50">
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 font-medium text-sm mb-4">
+        Topics Viewed
+      </span>
+      <h2 class="mb-6 text-gray-900 dark:text-white">Calculus Topics Covered</h2>
+      <p class="text-gray-600 dark:text-gray-300">
+        From limits to derivatives, explore the core topics of Calculus 1 with interactive visualizations and bee-powered flight paths. Learn by solving fun, real-world problems. <br> no more boring equations!
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {features.map((feature, index) => (
+      <div 
+        class="card p-6 border border-gray-200 dark:border-gray-700 slide-up" 
+        style={`animation-delay: ${index * 100}ms`}
+        key={index}
+      >
+        {/* Contenedor flex para icono y título en línea */}
+        <div class={`flex items-center mb-3`}>
+          <div class={`w-12 h-12 rounded-lg bg-${feature.color}-100 dark:bg-${feature.color}-900/30 flex items-center justify-center mr-4`}>
+            <svg 
+              class={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
+        </div>
+
+        {/* Imagen, si existe */}
+        {feature.image && (
+          <img 
+            src={feature.image} 
+            alt={feature.title} 
+            class="mb-4 rounded-md w-full object-cover max-h-40" 
+          />
+        )}
+
+        {/* Descripción */}
+        <p class="text-gray-600 dark:text-gray-300">{feature.description}</p>
+      </div>
+    ))}
+  </div>
+
+    
+  </div>
+</section>
