@@ -27,6 +27,18 @@ const {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
     <ViewTransitions />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="antialiased bg-white dark:bg-secondary-950 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
     <div id="page-wrapper" class="page-transition-wrapper">
@@ -62,5 +74,17 @@ const {
       });
     </script>
     <script src="../scripts/transitions.js"></script>
+    <script>
+      // Forzar renderizado MathJax después de cada navegación Astro
+      function renderMath() {
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise();
+        }
+      }
+      // Renderiza al cargar la página
+      document.addEventListener('DOMContentLoaded', renderMath);
+      // Renderiza después de cada navegación Astro
+      document.addEventListener('astro:page-load', renderMath);
+    </script>
   </body>
 </html>
