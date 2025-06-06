@@ -1,0 +1,13 @@
+---
+// filepath: src/components/Equation.astro
+const { children, display = false } = Astro.props;
+const content = children
+  ? (typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children))
+  : '';
+---
+
+{display ? (
+  <div>{content}</div>
+) : (
+  <span>{content}</span>
+)}

@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Equation from '../components/Equation.astro';
 ---
 
-<Layout title="Features - Impressive Animations & Experiences">
+<Layout title="Learn - keep reading">
   <Header />
   <main>
     <!-- Hero Section -->
@@ -34,7 +35,6 @@ import Footer from '../components/Footer.astro';
     <section class="section relative z-10 overflow-hidden py-12 md:py-16">
       <div class="container-custom">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <!-- Feature Card 1: 3D Transform -->
           <div class="feature-card group perspective min-h-[400px]">
             <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
               <div class="absolute inset-0 backface-hidden">
@@ -42,19 +42,10 @@ import Footer from '../components/Footer.astro';
                   class="card h-full w-full bg-cover bg-center rounded-lg"
                   style="background-image: url('/cartaCauta.jpg');"
                 >
-                  <!-- Puedes dejarlo vacío si solo deseas mostrar la imagen -->
-                </div>
+                  </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our 3D transformations use CSS perspective and transform properties to create immersive experiences.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
-                </div>
+                <img src="/cautaCartaReverso.png" alt="Gráfica de la Abeja Cauta" class="w-full h-full object-scale-down rounded-lg shadow-md">
               </div>
             </div>
           </div>
@@ -62,79 +53,14 @@ import Footer from '../components/Footer.astro';
           <div class="feature-card group perspective min-h-[400px]">
             <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
               <div class="absolute inset-0 backface-hidden">
-                  <div class="absolute inset-0 backface-hidden">
-                  <div
-                    class="card h-full w-full bg-cover bg-center rounded-lg"
-                    style="background-image: url('/cartaDanzante.jpg');"
-                  >
-                    <!-- Puedes dejarlo vacío si solo deseas mostrar la imagen -->
+                <div
+                  class="card h-full w-full bg-cover bg-center rounded-lg"
+                  style="background-image: url('/cartaDanzante.jpg');"
+                >
                   </div>
-                </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our 3D transformations use CSS perspective and transform properties to create immersive experiences.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="feature-card group perspective min-h-[400px]">
-            <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
-              <div class="absolute inset-0 backface-hidden">
-                <div class="absolute inset-0 backface-hidden">
-                  <div
-                    class="card h-full w-full bg-cover bg-center rounded-lg"
-                    style="background-image: url('/cartaPerseverante.jpg');"
-                  >
-                    <!-- Puedes dejarlo vacío si solo deseas mostrar la imagen -->
-                  </div>
-                </div>
-              </div>
-              <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our 3D transformations use CSS perspective and transform properties to create immersive experiences.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          
-          <div class="feature-card group perspective min-h-[400px]">
-            <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
-              <div class="absolute inset-0 backface-hidden">
-                <div class="absolute inset-0 backface-hidden">
-                  <div
-                    class="card h-full w-full bg-cover bg-center rounded-lg"
-                    style="background-image: url('/cartaFast.jpg');"
-                  >
-                    <!-- Puedes dejarlo vacío si solo deseas mostrar la imagen -->
-                  </div>
-                </div>
-              </div>
-              <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our 3D transformations use CSS perspective and transform properties to create immersive experiences.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
-                </div>
+                <img src="/danzanteCartaReverso.png" alt="Gráfica de la Abeja Danzante" class="w-full h-full object-scale-down rounded-lg shadow-md">
               </div>
             </div>
           </div>
@@ -142,25 +68,14 @@ import Footer from '../components/Footer.astro';
           <div class="feature-card group perspective min-h-[400px]">
             <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
               <div class="absolute inset-0 backface-hidden">
-                <div class="absolute inset-0 backface-hidden">
-                  <div
-                    class="card h-full w-full bg-cover bg-center rounded-lg"
-                    style="background-image: url('/cartaAgile.jpg');"
-                  >
-                    <!-- Puedes dejarlo vacío si solo deseas mostrar la imagen -->
+                <div
+                  class="card h-full w-full bg-cover bg-center rounded-lg"
+                  style="background-image: url('/cartaPerseverante.jpg');"
+                >
                   </div>
-                </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our 3D transformations use CSS perspective and transform properties to create immersive experiences.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
-                </div>
+                <img src="/perseveranteCartaReverso.png" alt="Gráfica de la Abeja Perseverante" class="w-full h-full object-contain rounded-lg shadow-md">
               </div>
             </div>
           </div>
@@ -168,25 +83,44 @@ import Footer from '../components/Footer.astro';
           <div class="feature-card group perspective min-h-[400px]">
             <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
               <div class="absolute inset-0 backface-hidden">
-                <div class="absolute inset-0 backface-hidden">
-                  <div
-                    class="card h-full w-full bg-cover bg-center rounded-lg"
-                    style="background-image: url('/cartaSmart.jpg');"
-                  >
-                    <!-- Puedes dejarlo vacío si solo deseas mostrar la imagen -->
+                <div
+                  class="card h-full w-full bg-cover bg-center rounded-lg"
+                  style="background-image: url('/cartaFast.jpg');"
+                >
                   </div>
-                </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our 3D transformations use CSS perspective and transform properties to create immersive experiences.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
-                </div>
+                <img src="/rapidaCartaReverso.png" alt="Gráfica de la Abeja Rápida" class="w-full h-full object-contain rounded-lg shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card group perspective min-h-[400px]">
+            <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
+              <div class="absolute inset-0 backface-hidden">
+                <div
+                  class="card h-full w-full bg-cover bg-center rounded-lg"
+                  style="background-image: url('/cartaAgile.jpg');"
+                >
+                  </div>
+              </div>
+              <div class="absolute inset-0 backface-hidden rotate-y-180">
+                <img src="/agileCartaReverso.png" alt="Gráfica de la Abeja Ágil" class="w-full h-full object-contain rounded-lg shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card group perspective min-h-[400px]">
+            <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
+              <div class="absolute inset-0 backface-hidden">
+                <div
+                  class="card h-full w-full bg-cover bg-center rounded-lg"
+                  style="background-image: url('/cartaSmart.jpg');"
+                >
+                  </div>
+              </div>
+              <div class="absolute inset-0 backface-hidden rotate-y-180">
+                <img src="/smartCartaReverso.png" alt="Gráfica de la Abeja Estratega Inteligente" class="w-full h-full object-contain rounded-lg shadow-md">
               </div>
             </div>
           </div>
@@ -228,7 +162,17 @@ import Footer from '../components/Footer.astro';
           <p class="text-gray-600 dark:text-gray-300">
             Analyze each bee's performance to understand how different functions behave in motion.
           </p>
+          <br>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/learn" 
+               class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+               onclick="window.location.reload(); return false;"
+               >
+              Reveal functions
+            </a>
+          </div>
         </div>
+        
         
         <div class="comparison-table-container overflow-x-auto -mx-4 px-4 pb-4">
           <table class="comparison-table w-full border-collapse min-w-[640px]">
@@ -244,9 +188,12 @@ import Footer from '../components/Footer.astro';
             <tbody>
               <tr class="feature-row">
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium">The Cautious</td>
-                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">15ln(t + 1)</td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
-                  15/(t+1)
+                   {'$$15 \\ln(t + 1)$$'}
+
+                </td>
+                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
+                  {'$$\\frac{15}{t + 1}$$'}
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
                   <span class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400">
@@ -267,9 +214,9 @@ import Footer from '../components/Footer.astro';
               </tr>
               <tr class="feature-row">
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium">The Dancing</td>
-                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">t+sin**2(t)</td>
+                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">{'$$t + \\sin^2(t)$$'}</td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
-                  1+2sin(t)cos(t)
+                  {'$$1 + 2\\sin(t)\\cos(t)$$'}
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
                   <span class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400">
@@ -284,22 +231,22 @@ import Footer from '../components/Footer.astro';
                     <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                     </svg>
-                    0.421 m/s
+                    1.58 m/s
                   </span>
                 </td>
               </tr>
               <tr class="feature-row">
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium">The Persevering</td>
-                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">t+cos(t)-1</td>
+                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">{'$$t + \\cos(t) - 1$$'}</td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
-                  1-sin(t)
+                  {'$$1 - \\sin(t)$$'}
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
                   <span class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400">
                     <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                     </svg>
-                    59.952 m
+                    58.05 m
                   </span>
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
@@ -307,15 +254,15 @@ import Footer from '../components/Footer.astro';
                     <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                     </svg>
-                    1.952 m/s
+                    1.30 m/s
                   </span>
                 </td>
               </tr>
               <tr class="feature-row">
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium">The Fast</td>
-                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">sqrt(30t)</td>
+                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">{'$$\\sqrt{30t}$$'}</td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
-                  15/sqrt(30t)
+                  {'$$\\frac{15}{\\sqrt{30t}}$$'}
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
                   <span class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400">
@@ -336,9 +283,9 @@ import Footer from '../components/Footer.astro';
               </tr>
               <tr class="feature-row">
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium">The Agile</td>
-                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">5sqrt(t)</td>
+                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">{'$$5\\sqrt{t}$$'}</td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
-                  5/(2sqrt(t))
+                  {'$$\\frac{5}{2\\sqrt{t}}$$'}
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
                   <span class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400">
@@ -359,9 +306,9 @@ import Footer from '../components/Footer.astro';
               </tr>
               <tr class="feature-row">
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium">The Smart Strategist</td>
-                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">0.3t * tan^-1(t)</td>
+                <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">{'$$0.3t \\cdot \\tan^{-1}(t)$$'}</td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center">
-                  0.3(tan^-1(t) + t/(1+t^2))
+                  {'$$0.3\\left(\\tan^{-1}(t) + \\frac{t}{1+t^2}\\right)$$'}
                 </td>
                 <td class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10">
                   <span class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400">

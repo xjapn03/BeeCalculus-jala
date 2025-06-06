@@ -28,6 +28,7 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
     <ViewTransitions />
     <script>
+      // @ts-ignore
       window.MathJax = {
         tex: {
           inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -75,16 +76,23 @@ const {
     </script>
     <script src="../scripts/transitions.js"></script>
     <script>
-      // Forzar renderizado MathJax después de cada navegación Astro
-      function renderMath() {
+      function waitForMathJaxAndRender() {
+        // @ts-ignore
         if (window.MathJax && window.MathJax.typesetPromise) {
+          // @ts-ignore
           window.MathJax.typesetPromise();
+        } else {
+          setTimeout(waitForMathJaxAndRender, 50);
         }
       }
-      // Renderiza al cargar la página
-      document.addEventListener('DOMContentLoaded', renderMath);
-      // Renderiza después de cada navegación Astro
-      document.addEventListener('astro:page-load', renderMath);
+
+      document.addEventListener('DOMContentLoaded', waitForMathJaxAndRender);
+
+      document.addEventListener('astro:page-load', () => {
+        // Espera 100ms para asegurar que el DOM ya tiene el nuevo contenido
+        setTimeout(waitForMathJaxAndRender, 100);
+      });
     </script>
+
   </body>
 </html>

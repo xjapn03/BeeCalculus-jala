@@ -1,0 +1,12 @@
+image: node:20
+
+pages:
+  script:
+    - npm ci
+    - npx astro build
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

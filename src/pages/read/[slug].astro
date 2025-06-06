@@ -20,53 +20,61 @@ const { slug } = Astro.params;
 const posts = {
   'The-Cautious-Bee': {
     title: 'The Cautious Bee (La Cauta)',
-    date: 'May 15, 2025',
+    date: 'Jun 5, 2025',
     author: 'Lilian Rosario Lopez',
     authorRole: 'JalaU Student',
-    authorAvatar: 'https://randomuser.me/api/portraits/women/32.jpg',
-    category: 'Product Updates',
+    authorAvatar: 'https://randomuser.me/api/portraits/lego/2.jpg',
+    category: 'Bee Updates',
     image: '/cautaGrafica.png',
     content: `
       <p class="mb-4">"The Cautious Bee" (La Cauta) follows a unique flight path that prioritizes control and stability. Its trajectory demonstrates a steady, deliberate progression rather than rapid bursts of speed.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/learn" 
+               class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+               onclick="window.location.reload(); return false;"
+               >
+              Reveal functions
+            </a>
+          </div>
 
 <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
 
 <p class="mb-4">The position of The Cautious Bee over time is modeled by the function:</p>
 
-<p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-  $f(t) = 15 \ln(t+1)$
-</p>
+<p>$$15 \\ln(t + 1)$$</p>
 
-<p class="mb-4">Where $f(t)$ represents the distance traveled in meters and $t$ is the time elapsed in seconds. Key aspects of its flight include:</p>
+<p class="mb-4">Where $$x(t)$$ represents the distance traveled in meters and $$t$$ is the time elapsed in seconds. Key aspects of its flight include:</p>
 
 <ul class="list-disc pl-6 mb-6 space-y-2">
-  <li>Its trajectory grows slowly at the beginning, but maintains a constant pace[cite: 11].</li>
-  <li>It advances in a controlled manner, without abrupt accelerations[cite: 11].</li>
-  <li>The domain for this function is $t \ge 0$.</li>
+  <li>Its trajectory grows slowly at the beginning, but maintains a constant pace.</li>
+  <li>It advances in a controlled manner, without abrupt accelerations.</li>
+  <li>The domain for this function is $$t \\ge 0$$</li>
 </ul>
 
 <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
 
-<p class="mb-4">To understand The Cautious Bee's instantaneous speed, we analyze the derivative of its position function. The velocity function, $f'(t)$, is given by:</p>
+<p class="mb-4">To understand The Cautious Bee's instantaneous speed, we analyze the derivative of its position function. The velocity function, $$x'(t)$$ is given by:</p>
 
 <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-  $f'(t) = \frac{15}{t+1}$
+  $$x'(t)=\\frac{15}{t + 1}$$
 </p>
+
 
 <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
 
 <ul class="list-disc pl-6 mb-6 space-y-2">
   <li>
-    <strong>Distance Reached at $t=60$s:</strong> $f(60) = 15 \ln(60+1) = 15 \ln(61) \approx 61.66$ meters[cite: 28].
+    <strong>Distance Reached at t=60s:</strong> <p> $$x(60) = 15 \ln(60+1) = 61.66 m$$ </p>
   </li>
   <li>
-    <strong>Velocity at $t=60$s:</strong> $f'(60) = \frac{15}{60+1} = \frac{15}{61} \approx 0.246$ meters/second[cite: 30].
+    <strong>Velocity at t=60s: </strong> <p>$$x'(60)=\\frac{15}{60 + 1} = 0.246 m/s$$</p>
   </li>
 </ul>
 
 <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
   <h3 class="text-xl font-semibold mb-3">Insight</h3>
-  <p>The decreasing nature of the velocity function, $f'(t) = \frac{15}{t+1}$, indicates that while the bee always moves forward, its rate of acceleration decreases over time. It starts cautiously and maintains a steady, predictable pace rather than a sprint, as illustrated by its gradual curve flattening out in the graph[cite: 30].</p>
+  <p>The decreasing nature of the velocity function, $$v(t)=\\frac{15}{t + 1}$$ indicates that while the bee always moves forward, its rate of acceleration decreases over time. It starts cautiously and maintains a steady, predictable pace rather than a sprint, as illustrated by its gradual curve flattening out in the graph.</p>
 </div>
 
 <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
@@ -78,305 +86,372 @@ const posts = {
   },
 
   'The-Dancing-Bee': {
-    title: 'The Dancing Bee (La Danzante)',
-    date: 'April 28, 2025',
-    author: 'Sergio Leonid Vallejos',
-    authorRole: 'JalaU student',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-    category: 'New Features',
-    image: '/danzanteGrafica.png',
-    content: `
-      <p class="mb-4">"The Dancing Bee" (La Danzante) exhibits a fascinating and unique flight pattern characterized by rhythmic oscillations. Its movement is always forward, though with charming variations in speed that give it a "dancing" quality.</p>
+  title: 'The Dancing Bee (La Danzante)',
+  date: 'Jun 5, 2025',
+  author: 'Sergio Leonid Vallejos',
+  authorRole: 'JalaU student',
+  authorAvatar: 'https://randomuser.me/api/portraits/lego/7.jpg',
+  category: 'Bee Updates',
+  image: '/danzanteGrafica.png',
+  content: `
+    <p class="mb-4">"The Dancing Bee" (La Danzante) exhibits a fascinating and unique flight pattern characterized by rhythmic oscillations. Its movement is always forward, though with charming variations in speed that give it a "dancing" quality.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/learn" 
+               class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+               onclick="window.location.reload(); return false;"
+               >
+              Reveal functions
+            </a>
+          </div>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
 
-      <p class="mb-4">The position of The Dancing Bee over time is defined by the function:</p>
+    <p class="mb-4">The position of The Dancing Bee over time is defined by the function:</p>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $x(t) = t + \sin^2(t)$
-      </p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$x(t) = t + \\sin^2(t)$$
+    </p>
 
-      <p class="mb-4">Where $x(t)$ represents the distance traveled in meters and $t$ is the time elapsed in seconds. Here are its key characteristics:</p>
+    <p class="mb-4">Where $$x(t)$$ represents the distance traveled in meters and $$t$$ is the time elapsed in seconds. Here are its key characteristics:</p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>Its movement is regular but includes small undulations that cause slight variations in speed.</li>
-        <li>It constantly accelerates and decelerates, even momentarily stopping before accelerating again.</li>
-        <li>Crucially, it is always moving forward without reversing its direction.</li>
-        <li>The domain for this function is $t \ge 0$.</li>
-      </ul>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>Its movement is regular but includes small undulations that cause slight variations in speed.</li>
+      <li>It constantly accelerates and decelerates, even momentarily stopping before accelerating again.</li>
+      <li>Crucially, it is always moving forward without reversing its direction.</li>
+      <li>The domain for this function is $$t \\ge 0$$</li>
+    </ul>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
 
-      <p class="mb-4">The instantaneous velocity of The Dancing Bee is derived from the position function. The velocity function, $x'(t)$, is:</p>
+    <p class="mb-4">The instantaneous velocity of The Dancing Bee is derived from the position function. The velocity function, $$x'(t)$$ is:</p>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $x'(t) = 1 + 2\sin(t)\cos(t)$
-      </p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$x'(t) = 1 + 2\\sin(t)\\cos(t)$$
+    </p>
 
-      <p class="mb-4">Let's examine its performance at 60 seconds:</p>
+    <p class="mb-4">Let's examine its performance at 60 seconds:</p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Distance Reached at $t=60$s:</strong> $x(60) = 60 + \sin^2(60) \approx 60 + (-0.952)^2 \approx 60 + 0.906 \approx 60.91$ meters.
-        </li>
-        <li>
-          <strong>Velocity at $t=60$s:</strong> $x'(60) = 1 + 2\sin(60)\cos(60) \approx 1 + 2(-0.952)(0.304) \approx 1 - 0.579 \approx 0.421$ meters/second.
-        </li>
-      </ul>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>
+        <strong>Distance Reached at $$t=60s:$$</strong>
+        <p>$$x(60) = 60 + \\sin^2(60) \\approx 60.91 \\text{ meters}$$</p>
+      </li>
+      <li>
+        <strong>Velocity at $$t=60s:$$</strong>
+        <p>$$x'(60) = 1 + 2\\sin(60)\\cos(60)\\approx 0.421 \\text{ m/s}$$</p>
+      </li>
+    </ul>
 
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 class="text-xl font-semibold mb-3">Understanding the "Dance"</h3>
-        <p>The term $2\sin(t)\cos(t)$ is equivalent to $\sin(2t)$. Therefore, the velocity function can also be expressed as $x'(t) = 1 + \sin(2t)$. This means the velocity oscillates between a minimum of $1-1=0$ m/s and a maximum of $1+1=2$ m/s. When the velocity is 0, the bee momentarily stops, creating its distinctive "dancing" motion, but it never moves backward since velocity is never negative.</p>
-      </div>
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
+      <h3 class="text-xl font-semibold mb-3">Understanding the "Dance"</h3>
+      <p>The term $$2\\sin(t)\\cos(t)$$ is equivalent to $$\\sin(2t)$$ Therefore, the velocity function can also be expressed as:</p>
+      
+      <p class="text-center font-mono bg-white dark:bg-gray-900 p-3 rounded-lg my-3">$$v(t) = 1 + \\sin(2t)$$</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
+      <p>This means the velocity oscillates between a minimum of $$1 - 1 = 0m/s$$ and a maximum of $$1 + 1 = 2m/s$$. When the velocity is 0, the bee momentarily stops, creating its distinctive "dancing" motion, but it never moves backward since velocity is never negative.</p>
+    </div>
 
-      <p class="mb-4">The graph of The Dancing Bee's trajectory shows a generally upward trend with small, periodic fluctuations, reflecting its constant forward motion with speed variations. The velocity graph illustrates these periodic accelerations and decelerations, emphasizing that despite these changes, the speed never drops below zero.</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
 
-      <p class="mb-4">This bee embodies a dynamic and adaptable approach to movement, always progressing while adding a unique rhythm to its journey.</p>
-    `
-  },
+    <p class="mb-4">The graph of The Dancing Bee's trajectory shows a generally upward trend with small, periodic fluctuations, reflecting its constant forward motion with speed variations. The velocity graph illustrates these periodic accelerations and decelerations, emphasizing that despite these changes, the speed never drops below zero.</p>
+
+    <p class="mb-4">This bee embodies a dynamic and adaptable approach to movement, always progressing while adding a unique rhythm to its journey.</p>
+  `
+},
+
 
   'The-Persevering-Bee': {
-    title: 'The Persevering Bee (La Perseverante)',
-    date: 'April 10, 2025',
-    author: 'Romina Noemi Calani',
-    authorRole: 'JalaU Student',
-    authorAvatar: 'https://randomuser.me/api/portraits/women/65.jpg',
-    category: 'Developer Updates',
-    image: '/perseveranteGrafica.png',
-    content: `
-      <p class="mb-4">"The Persevering Bee" (La Perseverante) demonstrates a flight path of unwavering determination. Its trajectory signifies continuous progress despite small, rhythmic fluctuations, always pushing forward without ever stopping or retreating.</p>
+  title: 'The Persevering Bee (La Perseverante)',
+  date: 'Jun 5, 2025',
+  author: 'Romina Noemi Calani',
+  authorRole: 'JalaU Student',
+  authorAvatar: 'https://randomuser.me/api/portraits/lego/5.jpg',
+  category: 'Bee Updates',
+  image: '/perseveranteGrafica.png',
+  content: `
+    <p class="mb-4">"The Persevering Bee" (La Perseverante) demonstrates a flight path of unwavering determination. Its trajectory signifies continuous progress despite small, rhythmic fluctuations, always pushing forward without ever stopping or retreating.</p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/learn" 
+         class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+         onclick="window.location.reload(); return false;"
+         >
+        Reveal functions
+      </a>
+    </div>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
 
-      <p class="mb-4">The position of The Persevering Bee over time is described by the function:</p>
+    <p class="mb-4">The position of The Persevering Bee over time is described by the function:</p>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $x(t) = t + \cos(t) - 1$
-      </p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$x(t) = t + \\cos(t) - 1$$
+    </p>
 
-      <p class="mb-4">Where $x(t)$ represents the distance traveled in meters and $t$ is the time elapsed in seconds. Key characteristics of its movement include:</p>
+    <p class="mb-4">Where $$x(t)$$ represents the distance traveled in meters and $$t$$ is the time elapsed in seconds. Key characteristics of its movement include:</p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>Its trajectory grows steadily, with small undulations caused by the oscillatory term $\cos(t)$.</li>
-        <li>Despite these speed variations, it never stops or moves backward.</li>
-        <li>It continues its race with repetitive cycles, consistently advancing.</li>
-        <li>The domain for this function is $t \ge 0$.</li>
-      </ul>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>Its trajectory grows steadily, with small undulations caused by the oscillatory term $$\\cos(t)$$</li>
+      <li>Despite these speed variations, it never stops or moves backward.</li>
+      <li>It continues its race with repetitive cycles, consistently advancing.</li>
+      <li>The domain for this function is $$t \\ge 0$$</li>
+    </ul>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
 
-      <p class="mb-4">The instantaneous velocity of The Persevering Bee is given by the derivative of its position function, $v(t)$:</p>
+    <p class="mb-4">The instantaneous velocity of The Persevering Bee is given by the derivative of its position function, $$v(t)$$</p>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $v(t) = 1 - \sin(t)$
-      </p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$v(t) = 1 - \\sin(t)$$
+    </p>
 
-      <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
+    <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Distance Reached at $t=60$s:</strong> $x(60) = 60 + \cos(60) - 1 \approx 60 + 0.952 - 1 \approx 59.952$ meters.
-        </li>
-        <li>
-          <strong>Velocity at $t=60$s:</strong> $v(60) = 1 - \sin(60) \approx 1 - (-0.952) \approx 1.952$ meters/second.
-        </li>
-      </ul>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>
+        <strong>Distance Reached at $$t=60s:$$</strong>
+        <p>$$x(60) = 60 + \\cos(60) - 1 \\approx 60 + 0.952 - 1 \\approx 59.95\\text{ meters}$$</p>
+      </li>
+      <li>
+        <strong>Velocity at $$t=60s:$$</strong>
+        <p>$$v(60) = 1 - \\sin(60) \\approx 1 - (-0.952) = 1.952 \\text{ m/s}$$</p>
+      </li>
+    </ul>
 
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 class="text-xl font-semibold mb-3">Understanding Perseverance</h3>
-        <p>The velocity function, $v(t) = 1 - \sin(t)$, oscillates between a minimum value of $1 - 1 = 0$ m/s and a maximum value of $1 - (-1) = 2$ m/s. Since the velocity is never negative ($v(t) \ge 0$), this mathematically confirms that The Persevering Bee consistently moves forward. Even when its speed temporarily drops to zero, it immediately picks up momentum again, truly embodying perseverance.</p>
-      </div>
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
+      <h3 class="text-xl font-semibold mb-3">Understanding Perseverance</h3>
+      <p>The velocity function $$v(t) = 1 - \\sin(t)$$ oscillates between a minimum value of $$1 - 1 = 0 \\text{ m/s}$$ and a maximum value of $$1 - (-1) = 2 \\text{ m/s}$$</p>
+      
+      <p>Since the velocity is never negative $$v(t) \\ge 0$$ this mathematically confirms that The Persevering Bee consistently moves forward. Even when its speed temporarily drops to zero, it immediately picks up momentum again, truly embodying perseverance.</p>
+    </div>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
 
-      <p class="mb-4">The graph of The Persevering Bee's trajectory shows a continuous upward trend with minor, regular oscillations, illustrating its persistent forward motion. The velocity graph further clarifies how its speed varies periodically between 0 and 2 m/s, always staying positive, which is the hallmark of its unwavering progress.</p>
+    <p class="mb-4">The graph of The Persevering Bee's trajectory shows a continuous upward trend with minor, regular oscillations, illustrating its persistent forward motion. The velocity graph further clarifies how its speed varies periodically between 0 and 2 m/s, always staying positive, which is the hallmark of its unwavering progress.</p>
 
-      <p class="mb-4">This bee serves as a powerful illustration that consistent effort, even with minor setbacks, leads to steady and undeniable advancement towards a goal.</p>
-    `
-  },
+    <p class="mb-4">This bee serves as a powerful illustration that consistent effort, even with minor setbacks, leads to steady and undeniable advancement towards a goal.</p>
+  `
+},
+
   'The-Fast-Bee': {
-    title: 'The Fast Bee (La Rápida)',
-    date: 'March 22, 2025',
-    author: 'Juan Esteban Peraza',
-    authorRole: 'JalaU Student',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/22.jpg',
-    category: 'Product Updates',
-    image: '/rapidaGrafica.png',
-    content: `
-      <p class="mb-4">"The Fast Bee" (La Rápida) is characterized by its explosive start and rapid initial acceleration. Its flight path showcases a powerful burst of momentum that gradually stabilizes over time, allowing it to cover significant ground quickly.</p>
+  title: 'The Fast Bee (La Rápida)',
+  date: 'Jun 5, 2025',
+  author: 'Juan Esteban Peraza',
+  authorRole: 'JalaU Student',
+  authorAvatar: 'https://randomuser.me/api/portraits/lego/4.jpg',
+  category: 'Product Updates',
+  image: '/rapidaGrafica.png',
+  content: `
+    <p class="mb-4">"The Fast Bee" (La Rápida) is characterized by its explosive start and rapid initial acceleration. Its flight path showcases a powerful burst of momentum that gradually stabilizes over time, allowing it to cover significant ground quickly.</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/learn" 
+         class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+         onclick="window.location.reload(); return false;"
+         >
+        Reveal functions
+      </a>
+    </div>
 
-      <p class="mb-4">The position of The Fast Bee over time is defined by the function:</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $f(t) = \sqrt{30t}$
-      </p>
+    <p class="mb-4">The position of The Fast Bee over time is defined by the function:</p>
 
-      <p class="mb-4">Where $f(t)$ represents the distance traveled in meters and $t$ is the time elapsed in seconds. Key aspects of its flight include:</p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$f(t) = \\sqrt{30t}$$
+    </p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>It shows great momentum from the very beginning, advancing quickly.</li>
-        <li>As time passes, its growth rate stabilizes, meaning it continues to advance but with decreasing acceleration.</li>
-        <li>Its trajectory is always increasing, never retroceding.</li>
-        <li>The domain for this function is $t \ge 0$.</li>
-      </ul>
+    <p class="mb-4">Where $$f(t)$$ represents the distance traveled in meters and $$t$$ is the time elapsed in seconds. Key aspects of its flight include:</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>It shows great momentum from the very beginning, advancing quickly.</li>
+      <li>As time passes, its growth rate stabilizes, meaning it continues to advance but with decreasing acceleration.</li>
+      <li>Its trajectory is always increasing, never retroceding.</li>
+      <li>The domain for this function is $$t \\ge 0$$</li>
+    </ul>
 
-      <p class="mb-4">To understand The Fast Bee's instantaneous speed, we examine the derivative of its position function. The velocity function, $v(t)$, is given by:</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $v(t) = \frac{15}{\sqrt{30t}}$
-      </p>
+    <p class="mb-4">To understand The Fast Bee's instantaneous speed, we examine the derivative of its position function. The velocity function, $$v(t)$$ is given by:</p>
 
-      <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$v(t) = \\frac{15}{\\sqrt{30t}}$$
+    </p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Distance Reached at $t=60$s:</strong> $f(60) = \sqrt{30 \cdot 60} = \sqrt{1800} \approx 42.43$ meters.
-        </li>
-        <li>
-          <strong>Velocity at $t=60$s:</strong> $v(60) = \frac{15}{\sqrt{30 \cdot 60}} = \frac{15}{\sqrt{1800}} \approx \frac{15}{42.43} \approx 0.354$ meters/second.
-        </li>
-      </ul>
+    <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
 
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 class="text-xl font-semibold mb-3">Understanding its Speed Profile</h3>
-        <p>The velocity function reveals that The Fast Bee's speed is highest at the beginning of its journey and gradually decreases as time progresses. However, its velocity never reaches zero, meaning the bee is always in motion, just with a diminishing rate of acceleration. This reflects its characteristic of starting fast and then maintaining consistent, albeit slowing, progress.</p>
-      </div>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>
+        <strong>Distance Reached at $$t = 60s:$$</strong> 
+        <p>$$f(60) = \\sqrt{30 \\cdot 60} = \\sqrt{1800} \\approx 42.43 \\text{ meters}$$</p>
+      </li>
+      <li>
+        <strong>Velocity at $$t = 60$$s:</strong> 
+        <p>$$v(60) = \\frac{15}{\\sqrt{30 \\cdot 60}} = \\frac{15}{\\sqrt{1800}} \\approx \\frac{15}{42.43} \\approx 0.354 \\text{ m/s}$$</p>
+      </li>
+    </ul>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
+      <h3 class="text-xl font-semibold mb-3">Understanding its Speed Profile</h3>
+      <p>The velocity function reveals that The Fast Bee's speed is highest at the beginning of its journey and gradually decreases as time progresses. However, its velocity never reaches zero, meaning the bee is always in motion, just with a diminishing rate of acceleration. This reflects its characteristic of starting fast and then maintaining consistent, albeit slowing, progress.</p>
+    </div>
 
-      <p class="mb-4">The graph of The Fast Bee's trajectory shows a steep initial curve that gradually flattens out, indicating a rapid start followed by a more sustained, but less aggressive, increase in distance. The corresponding velocity graph clearly demonstrates this deceleration over time, highlighting its "fast start, steady pace" characteristic.</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
 
-      <p class="mb-4">This bee exemplifies the concept of initial high energy leading to substantial early gains, followed by an efficient, sustained flight.</p>
-    `
-  },
-  'The-Agile-Bee': {
-    title: 'The Agile Bee (La Ágil)',
-    date: 'March 5, 2025',
-    author: 'Fabricio Lennart Flores',
-    authorRole: 'JalaU Student',
-    authorAvatar: 'https://randomuser.me/api/portraits/women/45.jpg',
-    category: 'Security',
-    image: '/agileGrafica.png',
-    content: `
-      <p class="mb-4">"The Agile Bee" (La Ágil) exhibits a flight path characterized by its consistent and powerful initial advance. Its trajectory shows rapid growth in distance, which, while still progressing, becomes more moderate over time, demonstrating both vigor and sustained effort.</p>
+    <p class="mb-4">The graph of The Fast Bee's trajectory shows a steep initial curve that gradually flattens out, indicating a rapid start followed by a more sustained, but less aggressive, increase in distance. The corresponding velocity graph clearly demonstrates this deceleration over time, highlighting its "fast start, steady pace" characteristic.</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
+    <p class="mb-4">This bee exemplifies the concept of initial high energy leading to substantial early gains, followed by an efficient, sustained flight.</p>
+  `
+},
 
-      <p class="mb-4">The position of The Agile Bee over time is defined by the function:</p>
+ 'The-Agile-Bee': {
+  title: 'The Agile Bee (La Ágil)',
+  date: 'Jun 5, 2025',
+  author: 'Fabricio Lennart Flores',
+  authorRole: 'JalaU Student',
+  authorAvatar: 'https://randomuser.me/api/portraits/lego/1.jpg',
+  category: 'Bee Updates',
+  image: '/agileGrafica.png',
+  content: `
+    <p class="mb-4">"The Agile Bee" (La Ágil) exhibits a flight path characterized by its consistent and powerful initial advance. Its trajectory shows rapid growth in distance, which, while still progressing, becomes more moderate over time, demonstrating both vigor and sustained effort.</p>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $x(t) = 5\sqrt{t}$
-      </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/learn" 
+         class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+         onclick="window.location.reload(); return false;"
+         >
+        Reveal functions
+      </a>
+    </div>
 
-      <p class="mb-4">Where $x(t)$ represents the distance traveled in meters and $t$ is the time elapsed in seconds. Key aspects of its flight include:</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>It demonstrates a constant and powerful advance from the start.</li>
-        <li>Its position grows rapidly initially.</li>
-        <li>Over time, while still advancing, it does so at a more moderate pace.</li>
-        <li>The trajectory is always increasing, never retroceding.</li>
-        <li>The domain for this function is $t \ge 0$.</li>
-      </ul>
+    <p class="mb-4">The position of The Agile Bee over time is defined by the function:</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$x(t) = 5\\sqrt{t}$$
+    </p>
 
-      <p class="mb-4">The instantaneous velocity of The Agile Bee is given by the derivative of its position function, $x'(t)$:</p>
+    <p class="mb-4">Where $$x(t)$$ represents the distance traveled in meters and $$t$$ is the time elapsed in seconds. Key aspects of its flight include:</p>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $x'(t) = \frac{5}{2\sqrt{t}}$
-      </p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>It demonstrates a constant and powerful advance from the start.</li>
+      <li>Its position grows rapidly initially.</li>
+      <li>Over time, while still advancing, it does so at a more moderate pace.</li>
+      <li>The trajectory is always increasing, never retroceding.</li>
+      <li>The domain for this function is $$t \\ge 0$$</li>
+    </ul>
 
-      <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Distance Reached at $t=60$s:</strong> $x(60) = 5\sqrt{60} \approx 5 \cdot 7.746 \approx 38.73$ meters.
-        </li>
-        <li>
-          <strong>Velocity at $t=60$s:</strong> $x'(60) = \frac{5}{2\sqrt{60}} \approx \frac{5}{2 \cdot 7.746} \approx \frac{5}{15.492} \approx 0.323$ meters/second.
-        </li>
-      </ul>
+    <p class="mb-4">The instantaneous velocity of The Agile Bee is given by the derivative of its position function, $$x'(t):$$</p>
 
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 class="text-xl font-semibold mb-3">Dynamics of Agility</h3>
-        <p>The velocity function $x'(t) = \frac{5}{2\sqrt{t}}$ shows that The Agile Bee's speed is highest at the very beginning of its flight and then continuously decreases over time. However, its velocity never actually becomes zero, meaning it is always moving forward. This behavior illustrates a robust initial push followed by sustained, efficient movement at gradually declining speeds.</p>
-      </div>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$x'(t) = \\frac{5}{2\\sqrt{t}}$$
+    </p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
+    <p class="mb-4">Let's look at its performance at a specific moment, for instance, at 60 seconds:</p>
 
-      <p class="mb-4">The graph of The Agile Bee's trajectory is a curve that grows rapidly at first and then less steeply, reflecting its fast initial progress and subsequent moderated pace. The velocity graph clearly depicts this deceleration, showing the bee's excellent initial agility followed by efficient, prolonged endurance.</p>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>
+        <strong>Distance Reached at $$t = 60s:$$</strong>
+        <p>$$x(60) = 5\\sqrt{60} \\approx 5 \\cdot 7.746 \\approx 38.73\\text{ meters}$$</p>
+      </li>
+      <li>
+        <strong>Velocity at $$t = 60s:$$</strong>
+        <p>$$x'(60) = \\frac{5}{2\\sqrt{60}} \\approx \\frac{5}{2 \\cdot 7.746} \\approx \\frac{5}{15.492} \\approx 0.323\\text{ m/s}$$</p>
+      </li>
+    </ul>
 
-      <p class="mb-4">This bee embodies a powerful start combined with enduring, adaptable motion, making it a compelling example of dynamic progress.</p>
-    `
-  },
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
+      <h3 class="text-xl font-semibold mb-3">Dynamics of Agility</h3>
+      <p>The velocity function $$x'(t) = \\frac{5}{2\\sqrt{t}}$$ shows that The Agile Bee's speed is highest at the very beginning of its flight and then continuously decreases over time. However, its velocity never actually becomes zero, meaning it is always moving forward. This behavior illustrates a robust initial push followed by sustained, efficient movement at gradually declining speeds.</p>
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
+
+    <p class="mb-4">The graph of The Agile Bee's trajectory is a curve that grows rapidly at first and then less steeply, reflecting its fast initial progress and subsequent moderated pace. The velocity graph clearly depicts this deceleration, showing the bee's excellent initial agility followed by efficient, prolonged endurance.</p>
+
+    <p class="mb-4">This bee embodies a powerful start combined with enduring, adaptable motion, making it a compelling example of dynamic progress.</p>
+  `
+},
+
   'The-Smart-Strategist-Bee': {
     title: 'The Smart Strategist (La Estratega Inteligente)',
-    date: 'February 18, 2025',
+    date: 'Jun 5, 2025',
     author: 'Zayra Veronica Bolivar Bayona',
     authorRole: 'JalaU Student',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/67.jpg',
-    category: 'Integrations',
+    authorAvatar: 'https://randomuser.me/api/portraits/lego/3.jpg',
+    category: 'Bee Updates',
     image: '/inteligenteGrafica.png',
-    content: `
-      <p class="mb-4">"The Smart Strategist" (La Estratega Inteligente) embodies a refined and tactical approach to flight. Its trajectory reveals an initial determined pace that skillfully adapts, with its momentum gradually diminishing but never ceasing, always advancing towards a subtle, asymptotic endpoint.</p>
+     content: `
+    <p class="mb-4">"The Smart Strategist" (La Estratega Inteligente) embodies a refined and tactical approach to flight. Its trajectory begins with decisive motion and gradually decelerates, never stopping, but approaching a calm, asymptotic end with intelligent persistence.</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/learn" 
+         class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+         onclick="window.location.reload(); return false;"
+         >
+        Reveal functions
+      </a>
+    </div>
 
-      <p class="mb-4">The position of The Smart Strategist over time is modeled by the function:</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Trajectory Function and Behavior</h2>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $a(t) = 0.3t \cdot \tan^{-1}(t)$
-      </p>
+    <p class="mb-4">The position of The Smart Strategist over time is described by the function:</p>
 
-      <p class="mb-4">Where $a(t)$ represents the distance traveled in meters and $t$ is the time elapsed in seconds. Key characteristics of its intelligent movement include:</p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$a(t) = 0.3t \\cdot \\tan^{-1}(t)$$
+    </p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>It starts with a determined pace, but its forward momentum quickly diminishes.</li>
-        <li>It never retreats, though its progress gradually slows down.</li>
-        <li>It asymptotically approaches a complete stop it never fully reaches, persistently advancing millimeter by millimeter.</li>
-        <li>The domain for this function is $t \ge 0$.</li>
-      </ul>
+    <p class="mb-4">Where $$a(t)$$ represents the distance traveled in meters and $$t$$ is the time elapsed in seconds. Key characteristics of its strategic movement include:</p>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>It begins with assertive motion, but the pace gradually slows down.</li>
+      <li>Its trajectory always increases, never going backward.</li>
+      <li>It asymptotically approaches a final limit, moving ever more subtly over time.</li>
+      <li>The domain for this function is $$t \\ge 0$$</li>
+    </ul>
 
-      <p class="mb-4">The instantaneous velocity of The Smart Strategist, $v(t)$, is derived from the product rule and the derivative of the inverse tangent function:</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Velocity Analysis</h2>
 
-      <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
-        $v(t) = 0.3 \left(\tan^{-1}(t) + \frac{t}{1+t^2}\right)$
-      </p>
+    <p class="mb-4">The instantaneous velocity of The Smart Strategist is given by the derivative of its position function:</p>
 
-      <p class="mb-4">Let's analyze its performance at a specific moment, for instance, at 60 seconds:</p>
+    <p class="mb-4 text-center font-mono bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+      $$v(t) = 0.3\\left(\\tan^{-1}(t) + \\frac{t}{1 + t^2}\\right)$$
+    </p>
 
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Distance Reached at $t=60$s:</strong> $a(60) = 0.3 \cdot 60 \cdot \tan^{-1}(60) \approx 18 \cdot 1.554 \approx 27.97$ meters.
-        </li>
-        <li>
-          <strong>Velocity at $t=60$s:</strong> $v(60) = 0.3 \left(\tan^{-1}(60) + \frac{60}{1+60^2}\right) \approx 0.3 \left(1.554 + \frac{60}{3601}\right) \approx 0.3 (1.554 + 0.0166) \approx 0.3 \cdot 1.5706 \approx 0.471$ meters/second.
-        </li>
-      </ul>
+    <p class="mb-4">Let's examine its performance at a specific moment, such as at 60 seconds:</p>
 
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 class="text-xl font-semibold mb-3">The Asymptotic Advance</h3>
-        <p>As time $t$ approaches infinity, the $\tan^{-1}(t)$ term approaches $\frac{\pi}{2}$, and the $\frac{t}{1+t^2}$ term approaches 0. This means the total distance $a(t)$ approaches an asymptotic limit of $0.3 \cdot \frac{\pi}{2} \approx 0.471$ meters. This demonstrates a strategic conservation of energy, where the bee makes efficient progress up to a certain effective range, always moving but becoming incredibly precise and minimal in its final advances.</p>
-      </div>
+    <ul class="list-disc pl-6 mb-6 space-y-2">
+      <li>
+        <strong>Distance Reached at $$t = 60s:$$</strong>
+        <p>$$a(60) = 0.3 \\cdot 60 \\cdot \\tan^{-1}(60) \\approx 18 \\cdot 1.554 \\approx 27.97\\text{ meters}$$</p>
+      </li>
+      <li>
+        <strong>Velocity at $$t = 60s:$$</strong>
+        <p>$$v(60) = 0.3\\left(1.554 + \\frac{60}{1 + 60^2}\\right) \\approx 0.3(1.554 + 0.0166) \\approx 0.3 \\cdot 1.5706 \\approx 0.471\\text{ m/s}$$</p>
+      </li>
+    </ul>
 
-      <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8">
+      <h3 class="text-xl font-semibold mb-3">The Asymptotic Advance</h3>
+      <p>The velocity function shows that as time progresses, $$\\tan^{-1}(t) \\to \\frac{\\pi}{2}$$ and $$\\frac{t}{1 + t^2} \\to 0$$ Therefore, the velocity approaches:</p>
+      <p class="font-mono my-2">$$v(t) \\to 0.3 \\cdot \\frac{\\pi}{2} \\approx 0.471\\text{ m/s}$$</p>
+      <p>Likewise, the distance function $$a(t)$$ slowly approaches a final limit without ever fully reaching it. This illustrates the bee’s intelligent strategy: consistent, calculated, and energy-efficient advancement.</p>
+    </div>
 
-      <p class="mb-4">The graph of The Smart Strategist's trajectory shows a curve that increases and then gradually flattens, approaching a horizontal asymptote. The velocity graph reflects its initial acceleration followed by a continuous decrease in speed, converging to zero, but never quite reaching it. This illustrates its controlled and strategically diminishing pace.</p>
+    <h2 class="text-2xl font-semibold mb-4 mt-8">Visual Representation</h2>
 
-      <p class="mb-4">This bee masterfully exemplifies strategic progress, where a finite resource or effort leads to a significant, yet ultimately bounded, achievement, highlighting efficiency and precision in its journey.</p>
-    `
-  }
+    <p class="mb-4">The graph of The Smart Strategist's trajectory rises quickly at first, then gradually levels off, reflecting its asymptotic nature. The velocity graph mirrors this by showing a steady decline, approaching a constant value as time increases.</p>
+
+    <p class="mb-4">This bee exemplifies strategic excellence: purposeful and efficient, steadily approaching its goal with graceful precision, never wasting motion.</p>
+  `
+}
 };
 
-const post = posts[slug];
+type PostKey = keyof typeof posts;
+const post = posts[slug as PostKey];
 if (!post) return Astro.redirect('/404');
 ---
 
